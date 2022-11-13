@@ -32,5 +32,5 @@ Brief description of every file in this repository. Subject to change.
 ---
 [Renner Renner](https://github.com/RennersClouds)
 -
-[Rume Bosomo](https://github.com/Rumebosomo)
+[Rume Bosomo](https://github.com/Rumeayo)
 -
