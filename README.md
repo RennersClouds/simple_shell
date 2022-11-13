@@ -30,7 +30,7 @@ Brief description of every file in this repository. Subject to change.
 
 ### Authors
 ---
-[Faith Ikhidero](https://github.com/Faitholo)
+[Renner Renner](https://github.com/RennersClouds)
 -
-[Olumide Akinduko](https://github.com/logicSt)
+[Rume Bosomo](https://github.com/Rumebosomo)
 -
