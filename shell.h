@@ -1,6 +1,8 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 #include <dirent.h>
+#include <signal.h>
+#include <linux/limits.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <signal.h>
@@ -30,7 +32,11 @@
 #define PS2 write(STDOUT_FILENO, "\nMANDALORIAN$ ", 5)
 #define NEWLINE write(STDOUT_FILENO, "\n", 1)
 #define DELIM " \t"
-/* _getline.c */
+/**  MACROS */
+#define BUFSIZE 1024
+#define DELIM "\t\r\n\a"
+#define PRINTERR(C) (write(STDOUT_FILENO, c, _strlen(c)))
+/**  _getline.c */
 ssize_t _getline(char **lineptr, size_t *n, int fd, list_t **mt);
 void reset_buffer(char *buffer, ssize_t buf_size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
@@ -39,13 +45,13 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strtok(char *s, const char *delim);
 unsigned int _strlen(char *s);
-/* string02.c */
+/** string02.c */
 int _strcmp(char *s1, char *s2);
 int _atoi(char *s);
 char *_strcat(char *s1, char *s2, list_t **mt);
 char *_itoa(ssize_t num, list_t **mt);
 char *reverse_str(char *s);
-/* string03.c */
+/** string03.c */
 char *_strchr(char *s, char c);
 void _chartostr(char *s, char c);
 
@@ -54,5 +60,6 @@ void _puts(char *str);
 unsigned int nbr_spaces(char *s);
 char **stringToTokens(char *str);
 char *_strcpy(char *dest, const char *src);
-int _strlen(const char*s);
-#endif /* _SHELL_H_ */
+int _strlen(const char *s);
+extern char **environ;
+#endif /** _SHELL_H_ */
