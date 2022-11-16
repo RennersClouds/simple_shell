@@ -48,4 +48,11 @@ char *reverse_str(char *s);
 /* string03.c */
 char *_strchr(char *s, char c);
 void _chartostr(char *s, char c);
+
+int _puts(char *str);
+void _puts(char *str);
+unsigned int nbr_spaces(char *s);
+char **stringToTokens(char *str);
+char *_strcpy(char *dest, const char *src);
+int _strlen(const char*s);
 #endif /* _SHELL_H_ */
